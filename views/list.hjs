@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Check-in</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Event Check-in List</h1>
+    <p>Total Users: {{ total }}</p>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+      {{#users}}
+        <tr>
+          <td>{{ name }}</td>
+          <td>{{ email }}</td>
+        </tr>
+      {{/users}}
+    </table>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/admin.js"></script>
+    
+  </body>
+</html>
